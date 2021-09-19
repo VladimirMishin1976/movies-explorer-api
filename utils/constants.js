@@ -1,8 +1,7 @@
 const {
   JWT_SECRET = 'secret',
   PORT = 3000,
-  MONGO_URL = 'mongodb://localhost:27017/mestodb',
-  NODE_ENV,
+  MONGO_URL = 'mongodb://localhost:27017/moviesdb',
 } = process.env;
 
 // const RegExpLink = /^https?:\/\/.+#?/;
@@ -13,5 +12,4 @@ module.exports = {
   JWT_SECRET,
   PORT,
   MONGO_URL,
-  NODE_ENV,
 };
