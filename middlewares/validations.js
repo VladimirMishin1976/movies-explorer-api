@@ -16,6 +16,14 @@ const validateUserBodyRegistration = celebrate({
   }),
 });
 
+const validateUserBodyUpdate = celebrate({
+  body: Joi.object().keys({
+    name: Joi.string().min(2).max(30).required(),
+    email: Joi.string().required().email().message('Поле email должен быть валидным'),
+
+  }),
+});
+
 const validateId = celebrate({
   params: Joi.object().keys({
     movieId: Joi.string().hex().length(24),
@@ -50,18 +58,13 @@ const validateCardBody = celebrate({
       return helpers.message('Поле "thumbnail" должно быть валидным url-адресом');
     }),
     movieId: Joi.number().required(),
-    link: Joi.string().required().custom((value, helpers) => {
-      if (validator.isURL(value)) {
-        return value;
-      }
-      return helpers.message('Поле "link" должно быть валидным url-адресом');
-    }),
   }),
 });
 
 module.exports = {
   validateAuthentication,
   validateUserBodyRegistration,
+  validateUserBodyUpdate,
   validateId,
   validateCardBody,
 };

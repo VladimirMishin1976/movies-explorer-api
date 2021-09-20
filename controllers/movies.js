@@ -2,12 +2,11 @@ const Movie = require('../models/movie');
 const NotFoundError = require('../errors/not-found-err');
 const ValidationError = require('../errors/validation-err');
 const AccessError = require('../errors/access-error');
-const ServerError = require('../errors/server-err');
 
 module.exports = {
   getMovies(req, res, next) {
     Movie.find({})
-      .then((movies) => res.status(200).send(movies))
+      .then((movies) => res.send(movies))
       .catch(next);
   },
 
@@ -42,9 +41,9 @@ module.exports = {
       .then((movie) => res.status(201).send(movie))
       .catch((error) => {
         if (error.name === 'ValidationError') {
-          return next(new ValidationError(error.message));
+          return next(new ValidationError('Переданы некорректные данные'));
         }
-        return next(new ServerError('На сервере произошла ошибка'));
+        return next();
       });
   },
 
@@ -59,7 +58,7 @@ module.exports = {
         }
 
         return Movie.findByIdAndRemove(req.params.movieId)
-          .then(() => res.status(200).send(movie))
+          .then(() => res.send(movie))
           .catch(next);
       });
   },

@@ -3,11 +3,11 @@ const router = require('express').Router();
 const {
   updateUser, getCurrentUser, getUsers,
 } = require('../controllers/users');
-const { validateAuthentication } = require('../middlewares/validations');
+const { validateUserBodyUpdate } = require('../middlewares/validations');
 
 router.get('/me', getCurrentUser);
 
-router.patch('/me', validateAuthentication, updateUser);
+router.patch('/me', validateUserBodyUpdate, updateUser);
 
 router.get('/', getUsers);
 
