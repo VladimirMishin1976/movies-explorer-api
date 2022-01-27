@@ -1,5 +1,5 @@
-const allowedCorse = ['http://mesto15.student.nomoredomains.club',
-  'https://mesto15.student.nomoredomains.club',
+const allowedCorse = ['http://movies.mishin.nomoredomains.club',
+  'https://movies.mishin.nomoredomains.club',
   'http://localhost:3000'];
 
 const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
