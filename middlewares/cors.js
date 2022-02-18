@@ -1,5 +1,6 @@
 const allowedCorse = ['http://movies.mishin.nomoredomains.club',
   'https://movies.mishin.nomoredomains.club',
+  'https://movies-explorer-api-i2294ep7c-vladimirmishin1976.vercel.app',
   'http://localhost:3000'];
 
 const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';

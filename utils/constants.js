@@ -1,6 +1,6 @@
 const {
   JWT_SECRET = 'secret',
-  PORT = 3005,
+  PORT = 3001,
   MONGO_URL = 'mongodb://localhost:27017/moviesdb',
 } = process.env;
 
