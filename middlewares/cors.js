@@ -1,6 +1,7 @@
 const allowedCorse = ['http://movies.mishin.nomoredomains.club',
   'https://movies.mishin.nomoredomains.club',
-  'http://movies-frontend-git-versel-vladimirmishin1976.vercel.app',
+  'http://movies-frontend-git-main-vladimirmishin1976.vercel.app',
+  'http://movies-frontend-vladimirmishin1976.vercel.app/',
   'http://localhost:3000'];
 
 const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
