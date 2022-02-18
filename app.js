@@ -26,7 +26,7 @@ app.use(helmet());
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(cors);
+app.use(cors);
 
 // Краш-тест сервера ||||||||||||||||||||||||||||||||||
 app.get('/crash-test', () => {
