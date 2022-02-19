@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "`/routes` — папка с файлами роутера  \r `/controllers` — папка с файлами контроллеров пользователя и карточки   \r `/models` — папка с файлами описания схем пользователя и карточки",
   "main": "app.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "lint": "npx eslint . --fix",
     "start": "node app.js",
